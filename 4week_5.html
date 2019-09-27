@@ -1,0 +1,48 @@
+<!--숫자 맞추기 -->
+
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    cnt=1;
+	rand=parseInt((Math.random()*100)+1);
+    document.write("random number: " + rand);
+
+	function test() {
+        document.getElementById("guesses").value=(cnt++);
+
+		num=document.getElementById("user").value;
+			if(rand==num)        {
+				document.getElementById("result").value=("성공입니다.");
+			}
+            else{                                
+				if(rand>num){            
+					document.getElementById("result").value=("낮습니다.");
+				}
+                else{                      
+					document.getElementById("result").value=("큽니다.");
+				}
+			}	
+			
+	}
+  </script>
+ </head>
+
+ <body>
+	<h2>숫자 맞추기 게임</h2>
+	이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에 있습니다.
+	<form>
+		숫자 : 
+		<input type="text" id="user" size="10">
+        <input type="button" id="btn" value="확인" onclick="test()">
+        <br><br>
+
+		추측횟수:<input type="text" id="guesses" size="10">
+        힌트:<input type="text" id="result" size="10">
+        
+	</form>
+	<div id="area"></div>
+ </body>
+</html>
