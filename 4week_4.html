@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   
+    <body>
+            <script>
+                var ret = prompt("스크립트 프롬프트:\n100미만의 정수만 입력:");
+                if(parseInt(ret) == NaN){
+                    alert("5050");
+                }
+                else if(ret>=100){
+                    alert("정수" + ret + "은 100보다 작지 않습니다.");
+                }
+                else if(ret==null){
+                    alert("5050");
+                }
+                else {
+                    var num=0;
+                    for (var i=1; i<= ret; i++){
+                        num=num+i;
+  
+                    }
+                    alert(num);
+                }
+                </script>
+    </body>
+</html>
