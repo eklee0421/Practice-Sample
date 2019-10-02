@@ -1,3 +1,5 @@
+//5week LED 예제에 사용한 헤더파일
+
 #pragma once
 #define nop()  __asm__ __volatile__ ("nop" ::)
 #define NOP()  __asm__ __volatile__ ("nop" ::)
