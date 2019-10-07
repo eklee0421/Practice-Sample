@@ -3,117 +3,131 @@
 using namespace std;
 
 class Node {
-   friend class List;
-private:
-   int value;
-   Node *next;
-   Node(int v, Node *n) : value(v), next(n) {}
-};
-
-class List {
-private:
-   Node *head, *tail;
-   int size = 0;
 public:
-   List(int);
-   void addBack(int);
-   void removeFront();
-   void addFront(int);
-   void showList();
-   void front();
-   void empty();
-   ~List();
+	Node(int x){
+		data = x;
+		next = NULL;
+	}
+	int data;
+	Node* next;
 };
 
-List::List(int v) {
-   head = tail = new Node(v, NULL);
-   size = 0;
-}
+class SLinkedList {
+public:
 
-void List::addBack(int value) {
-   Node* newNode = new Node(value, NULL);
-   if (head == NULL) head = newNode;
-   else tail->next = newNode;
-   tail = newNode;
-   size++;
-}
+	SLinkedList() {
+		head = NULL;
+		tail = NULL;
+		size = 0;
+	}
 
-void List::removeFront() {
-   if (head != NULL) {
-      Node* removal = head;
-      head = head->next;
-      cout << removal << "\n";
-      delete removal;
-      size--;
-   }
-   else if (head == NULL) {
-      cout << -1 << "\n";
-   }
-}
+	void addFront(int x) {
+		Node* node = new Node(x);
+		if (size==0) {
+			head = node;
+			tail = node;
+		}
+		else {
+			node->next = head;
+			head = node;
+		}
+		size++;
+	}
 
-void List::addFront(int value) {
-   Node* newNode = new Node(value, NULL);
-   if (head == NULL) head = newNode;
-   else {
-      head->next = head;
-      head = newNode;
-   }
-   size++;
-}
+	void removeFront() {
+		if (size == 0) cout << -1 << endl;
+		else if (size == 1) {
+			cout << head->data << endl;
+			head = NULL;
+			tail = NULL;
+		}
+		else {
+			Node* de = new Node(0);
+			de = head;
+			cout << head->data << endl;
+			head = head->next;
+			delete de;
+		}
+		size--;
+	}
 
-void List::showList() {
-   Node* scan = head;
-   while (scan != NULL) {
-      cout << scan->value << " ";
-      scan = scan->next;
-   }
-   cout << "\n";
-}
+	void front() {
+		if (size == 0) cout << -1 << endl;
+		else {
+			cout << head->data << endl;
+		}
+	}
 
-void List::front() {
-   if (head == NULL) cout << -1 << "\n";
-   else cout << head << "\n";
-}
+	void empty() {
+		if (size == 0) cout << 1 << endl;
+		else cout << 0 << endl;
+	}
 
-void List::empty() {
-   if (size == 0) cout << 1 << "\n";
-   else cout << 0 << "\n";
-}
+	void showList() {
+		if (size == 0) cout << -1 << endl;
+		else {
+			Node* count = new Node(0);
+			count = head;
+			for (int j = 0; j < size; j++) {
+				cout << count->data << " ";
+				count = count->next;
+			}
+			cout << endl;
+		}
+	}
 
-List::~List() {
-   while (head != NULL) removeFront();
-}
+	void addBack(int x) {
+		Node* node = new Node(x);
+		if (size == 0) {
+			head = node;
+			tail = node;
+		}
+		else {
+			tail->next = node;
+			tail = node;
+		}	
+		size++;
+	}
+
+private:
+	int size;
+	Node* head;
+	Node* tail;
+};
 
 int main() {
-   int N, x;
-   string op;
+	
+	string str;
 
-   List list = List(NULL);
+	int t = 0;
+	cin >> t;
+	
+	SLinkedList List;
 
-   cin >> N;
+	for (int T = 0; T < t; T++) {
+		cin >> str;
 
-   while (N--) {
-      cin >> op;
-
-      if (op == "addFront") {
-         cin >> x;
-         list.addFront(x);
-      }
-      else if (op == "removeFront") {
-         list.removeFront();
-      }
-      else if (op == "front") {
-         list.front();
-      }
-      else if (op == "empty") {
-         list.empty();
-      }
-      else if (op == "showList") {
-         list.showList();
-      }
-      else if (op == "addBack") {
-         cin >> x;
-         list.addBack(x);
-      }
-   }
-}
+		if (str == "addFront") {
+			int x = 0;
+			cin >> x;
+			List.addFront(x);
+		}
+		else if (str == "removeFront") {
+			List.removeFront();
+		}
+		else if (str == "front") {
+			List.front();
+		}
+		else if (str == "empty") {
+			List.empty();
+		}
+		else if (str == "showList") {
+			List.showList();
+		}
+		else if (str == "addBack") {
+			int x = 0;
+			cin >> x;
+			List.addBack(x);
+		}
+	}
+} 
