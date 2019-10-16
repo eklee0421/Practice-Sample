@@ -7,16 +7,14 @@
         <title>간단한 계산기</title>
         <script>
             function sen(char) {
-            var display = document.getElementById('display'); 
-            display.value = display.value + char;
+                var display = document.getElementById('display'); 
+                display.value = display.value + char;
         }
 
-        function calc(type) {
-             if(type== 2){
+        function calc() {
                 var display = document.getElementById('display');
                 var result = eval(display.value); 
                 document.getElementById('display').value = result;
-                }
         }
 
         </script>
@@ -40,7 +38,7 @@
             <input type = "button" value ="0" onclick="sen(0);">
             <input type = "button" value ="+" onclick="sen('+');"><br>
             <input type = "reset" value ="Clear">
-            <input type = "button" value ="Enter" onclick="calc(2);"><br>
+            <input type = "button" value ="Enter" onclick="calc();"><br>
         </form>
     </body>
 </html>
