@@ -1,0 +1,45 @@
+<!--
+ 마우스 휠을 위로 굴리면 5%씩 축소되고 위로 굴리면 5%씩 확대되는 예제
+ 400*300짜리 이미지를 직접 십진수로 이미지 변경
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onwheel</title>
+
+        <script>
+            var wsize=0;
+            var hsize=0;
+         function wheelUpDown(e, obj){
+            if(e.wheelDelta>0){
+                wsize = wsize - 20;
+                hsize = hsize - 15;
+                
+                if(obj.width == 20 || obj.height == 15){
+                    wsize = wsize + 20;
+                    hsize = hsize + 15;
+                } 
+            }
+            else {
+                wsize = wsize + 20;
+                hsize = hsize + 15;
+            }
+
+            obj.width= wsize + 400;
+            obj.height= hsize + 300;
+         }
+        </script>
+    </head>
+    
+    <body>
+        <h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+        <hr>
+        이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대됩니다
+        <br>
+        <img src="flower.jpg" width="400" height="300"
+        onwheel="wheelUpDown(event, this)"
+        >
+    </body>
+
+</html>
