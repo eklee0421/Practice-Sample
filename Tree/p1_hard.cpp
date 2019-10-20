@@ -10,6 +10,7 @@ public:
 		this->data = data;
 		this->parent = NULL;
 		depth = 0;
+		child_size = 0;
 	}
 
 	void insertChild(Node* chi) {
@@ -21,6 +22,7 @@ public:
 	Node* parent;
 	vector<Node*> child;
 	int depth;
+	int child_size;
 };
 
 class Tree {
@@ -44,15 +46,25 @@ public:
 	void insertNode(int parent_data, int data) {
 		Node* node = new Node(data);
 		Node* p = findNode(parent_data);
-		p->insertChild(node);
-		node->parent = p;
-		node_list.push_back(node);
-		node->depth = p->depth + 1;
-		size++;
+
+		if (p->data == 0) {
+			cout << -1 << endl;
+		}
+		else {
+			p->insertChild(node);
+			node->parent = p;
+			node_list.push_back(node);
+			node->depth = p->depth + 1;
+			p->child_size++;
+			size++;
+		}
 	}
 
 	Node* findNode(int data) {
-		Node* v = NULL;
+		
+		Node* newnode = new Node(0);
+		Node* v = newnode;
+
 		for (int i = 0; i < this->node_list.size(); i++) {
 
 			if (this->node_list[i]->data == data) {
@@ -60,21 +72,29 @@ public:
 				break;
 			}
 		}
-		
+
 		return v;
 	}
 
 	void printChild(int data) {
 		Node* n = findNode(data);
-		for (int i = 0; i < n->child.size(); i++) {
-			cout << n->child[i]->data << " ";
-		}
 
+		if (n->data == 0) {
+			cout << -1 << endl;
+		}
+		else if (n->child_size == 0) {
+			cout << 0 << endl;
+		}
+		else {
+			for (int i = 0; i < n->child.size(); i++) {
+				cout << n->child[i]->data << " ";
+			}
+		}
 	}
 
 	void printDepth(int x) {
 		Node* v = findNode(x);
-		if (v == NULL) {
+		if (v->data == 0) {
 			cout << -1 << endl;
 		}
 		else {
