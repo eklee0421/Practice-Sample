@@ -1,0 +1,49 @@
+<!--
+
+사이트 접속 시 어떤 브라우저인지 알려주고
+옵션 선택으로 새 창에 윈도우 열기
+
+-->
+
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>사이트 접속</title>
+<script>
+   var agent = navigator.userAgent.toLowerCase();
+
+if (agent.indexOf("chrome") != -1) {
+   alert("Google Chrome 브라우저입니다.");
+}
+else if (agent.indexOf("safari") != -1) {
+   alert("safari 브라우저입니다.");
+}
+else if (agent.indexOf("firefox") != -1) {
+   alert("Firefox 브라우저입니다.");
+}
+else if (agent.indexOf("msie") != -1) {
+   alert("Internet Explore 브라우저입니다.");
+}
+
+function loadSite(select) {
+   var index = select.selectedIndex;
+   var site = select.options[index].value;
+   window.open(site, "", "left=500,top=400,width=500,height=400");
+}
+</script>
+</head>
+<body>
+<h3>옵션 선택으로 사이트 접속</h3>
+옵션 선택 마다 새 윈도우에 접속합니다.
+<hr>
+<form>
+<p>접속할 사이트</p>
+<select onchange="loadSite(this)">
+    <option selected >새창 열기</option>
+   <option value="http://www.naver.com">naver</option>
+   <option value="http://www.google.com">google</option>
+   <option value="http://www.daum.net">daum</option>
+</select>
+</form>
+</body>
+</html>
