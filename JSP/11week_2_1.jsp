@@ -13,7 +13,7 @@
 
 <body>
 	<h1>성별과 좋아하는 과목 조사</h1>
-	<form action="4.jsp" method="post">
+	<form action="11week_2_2.jsp" method="post">
 	1. 성별을 선택하세요.[Radio버튼]<br>
 	<input type="radio" name="gender" value="남자"> 남자 
 	<input type="radio" name=gender value="여자"> 여자<br>
