@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="1_2.jsp" method="post">
+<form action="11week_1_2.jsp" method="post">
 <table style="margin-left: auto; margin-right: auto;">
 	<caption>로그인 입력화면</caption>
 	<tr><td>아이디</td>
