@@ -124,13 +124,13 @@ public:
 
 class graph {
 public:
-	edge*** edgeMatrix;						//edge정보를 관리하는 matrix
+	edge*** edgeMatrix;				//edge정보를 관리하는 matrix
 	DoublyVertexLinkedList* VertexList;		//전체 vertex 정보를 관리하는 이중연결리스트
 	DoublyEdgeLinkedList* EdgeList;			//전체 edge 정보를 관리하는 이중연결 리스트
-	int vertexSize;							//그래프에 존재하는 vertex의 개수
+	int vertexSize;					//그래프에 존재하는 vertex의 개수
 	int edgeSize;
 	int mappingTable[MappingSize];			// vertex의 고유한 번호와
-											// 해당 veretx의 matrix에서 index로 매칭
+							// 해당 veretx의 matrix에서 index로 매칭
 	graph() {
 		this->VertexList = new DoublyVertexLinkedList();
 		this->EdgeList = new DoublyEdgeLinkedList();
@@ -153,7 +153,7 @@ public:
 		}
 		return flag;
 	}
-	vertex* findVertex(int n) {				// VertexList에서 고유한 번호가 n인
+	vertex* findVertex(int n) {		// VertexList에서 고유한 번호가 n인
 		vertex* temp = VertexList->head;    //vertex의 주소 반환
 		while (temp != NULL) {
 			if (temp->data == n) {
@@ -171,7 +171,7 @@ public:
 
 		else {
 			edge*** tempMatrix = new edge * *[vertexSize + 1];  //정점이 1개 추가 될 때마다 
-			for (int i = 0; i < vertexSize + 1; i++) {        //기존 matrix보다 가로, 세로 길이가 1만큼 
+			for (int i = 0; i < vertexSize + 1; i++) {        	//기존 matrix보다 가로, 세로 길이가 1만큼 
 				tempMatrix[i] = new edge * [vertexSize + 1];	  //더 큰 tempmatrix 생성
 				for (int j = 0; j < vertexSize + 1; j++) {
 					tempMatrix[i][j] = NULL;
@@ -187,10 +187,10 @@ public:
 			this->edgeMatrix = tempMatrix;
 
 			vertex* newVertex = new vertex(n);
-			VertexList->insert(newVertex);						//VertexList에 고유번호가 n인 vertex 추가
+			VertexList->insert(newVertex);			//VertexList에 고유번호가 n인 vertex 추가
 			this->vertexSize++;
-			mappingTable[vertexSize - 1] = n;					// mappingtable에 vertex 자신이
-		}														//matrix의 어느 index인지 저장
+			mappingTable[vertexSize - 1] = n;		// mappingtable에 vertex 자신이
+		}							//matrix의 어느 index인지 저장
 	}
 
 
@@ -216,7 +216,7 @@ public:
 			}
 
 
-			for (int i = 0; i < vertexSize; i++) {			//EdgeList에서 고유번호가 n인 vertex와 연결된 모든 edge들 제거
+			for (int i = 0; i < vertexSize; i++) {	//EdgeList에서 고유번호가 n인 vertex와 연결된 모든 edge들 제거
 				if (this->edgeMatrix[middleIdx][i] != NULL) {
 					EdgeList->remove(this->edgeMatrix[middleIdx][i]);
 				}
