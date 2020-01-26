@@ -11,7 +11,7 @@ boolean stringComplete = false;  // 수신 문자열이 개행 문자로 종료
 
 void setup() {
   Serial.begin(9600); // 시리얼 포트 초기화
-  inputString.reserve(200);   //최대 200문자가지 보관
+  inputString.reserve(200);   //최대 200문자까지 보관
 }
 
 void loop() {
@@ -22,7 +22,8 @@ void loop() {
   }
 }
 
-void serialEvent() {
+//폴링 방식으로 동작하며 데이터가 수신된 경우 main에서 자동으로 serialEvent() 
+void serialEvent() {  
   while (Serial.available()) {  //도착한 모든 데이터 읽음 //Serial.available() => 시리얼 포트에 수신되어 저장되어 있는 바이트 수 반환
     char inchar = (char)Serial.read();  //1바이트 읽음
     inputString += inChar;  //문자열 뒤에 붙임
