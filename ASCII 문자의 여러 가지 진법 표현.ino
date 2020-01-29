@@ -9,12 +9,10 @@ void setup() {
  void loop() {
   for(int i = 33; i<= 40; i++){
     Serial.write(i);  //2진 숫자로 전송
-    Serial.print("\t" + Srting(i, DEC));  //10진 문자열로 변경하여 전송
+    Serial.print("\t" + String(i, DEC));  //10진 문자열로 변경하여 전송
     Serial.print("\t" + String(i, OCT));  //8진 문자열로 변경하여 전송
     Serial.print("\t" + String(i, HEX));  //16진 문자열로 변경하여 전송
     Serial.print("\t" + String(i, BIN));  //2진 문자열로 변경하여 전송
-  }
-}
-  
+  }  
   while(1);
 }
