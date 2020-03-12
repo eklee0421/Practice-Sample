@@ -38,6 +38,4 @@ int main() {
 	else {
 		cout << "시험 실패" << endl;
 	}
-  
-	return 0;
 }
