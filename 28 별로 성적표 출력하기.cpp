@@ -6,6 +6,8 @@ get함수는 문자를 입력 받는다
 getline은 문자열을 입력 받음
 */
 
+//성적표를 *로 출력
+
 #include <iostream>
 using namespace std;
 
