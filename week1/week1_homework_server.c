@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
     int serv_sock;	// 서버 소켓
     int clnt_sock;	// 클라이언트 소켓 => 서버측에서 클라이언트와 데이터 송수신을 하기 위한 소켓
     int fd;
-    char buf[BUF_SIZE];
 
     struct sockaddr_in serv_addr;	//서버 주소 정보 저장
     struct sockaddr_in clnt_addr;	// 클라이언트 주소 정보 저장
@@ -62,12 +61,12 @@ int main(int argc, char *argv[])
     //printf("file descriptor: %d \n", fd);
 
     // week1_homework.txt 파일의 내용을 읽어오는 부분
-    if (read(fd, buf, sizeof(buf)) == -1)
+    if (read(fd, message, sizeof(message)) == -1)
 	    error_handling("read() error!");
    // printf("file data: %s", buf);
     
     // write 함수를 통해서 데이터를 송수신
-    write(clnt_sock, buf, sizeof(buf));
+    write(clnt_sock, message, sizeof(message));
     close(fd);
     close(clnt_sock);
     close(serv_sock);
