@@ -22,14 +22,11 @@ int main() {
 			index[arr[i]] = i;
 		}
 		
-		int cnt = 0;	//수레바퀴가 돌아야하는 수
-		for (int i = 0; i < n; i++) {
-			if (i == n - 1) {
-				if (index[i] == n-1) cnt++;
-			}
+		int cnt = 1;	//수레바퀴가 돌아야하는 수
+		for (int i = 1; i < n; i++) {
 			if (index[i + 1] > index[i]) cnt++;
 		}
 
-		cout << cnt-1 << "\n";
+		cout << cnt << "\n";
 	}
 }
