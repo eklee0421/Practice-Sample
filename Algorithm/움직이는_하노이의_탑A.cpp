@@ -1,3 +1,5 @@
+//test case가 100개 이하이며 시간은 5초 이하
+
 #include <iostream>
 using namespace std;
 
