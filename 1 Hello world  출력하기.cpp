@@ -1,10 +1,8 @@
 /*
-
 iostream 라이브러리를 #include를 통해 가지고 온다.
 
 using namespace std; 를 사용하면,
 코드 앞에 일일이 std::를 붙여야 하는 번거로움을 줄일 수 있다
-
 */
 
 #include <iostream>
