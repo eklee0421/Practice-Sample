@@ -27,7 +27,6 @@ int main() {
 			else {	//만약 나눌 수 있으면 나눠준다
 				cout << an / b << endl;
 				an %= b;
-				cout << an << endl;
 			}
 		}
 
