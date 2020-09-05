@@ -9,5 +9,6 @@ public class AccountingApp {
 		System.out.println("Dividend 1: " + (10000.0 - 10000.0 * 0.3) * 0.5);
 		System.out.println("Dividend 2: " + (10000.0 - 10000.0 * 0.3) * 0.3);
 		System.out.println("Dividend 3: " + (10000.0 - 10000.0 * 0.3) * 0.2);
+		
 	}
 }
