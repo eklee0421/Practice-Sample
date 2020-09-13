@@ -1,4 +1,4 @@
-public class AccountingIFApp {
+public class ifAccountingIFApp {
  
     public static void main(String[] args) {
  
