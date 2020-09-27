@@ -9,7 +9,7 @@ bool solution(vector<string> phone_book) {
     for(int i = 0; i < phone_book.size(); i++){
         for(int j = 0; j < phone_book.size(); j++){
             if(i == j) continue;
-            if((phone_book[j].find(phone_book[i])) == 0 ) {answer = false; break;}
+            if((phone_book[j].find(phone_book[i])) == 0 ) {answer = false; return answer;}
         }
     }
     
