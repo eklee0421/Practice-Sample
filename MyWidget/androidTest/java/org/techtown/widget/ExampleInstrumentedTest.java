@@ -1,4 +1,4 @@
-package org.techtown.myframelayout;
+package org.techtown.widget;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("org.techtown.myframelayout", appContext.getPackageName());
+        assertEquals("org.techtown.widget", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package org.techtown.myframelayout;
+package org.techtown.widget;
 
 import org.junit.Test;
 
