@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MySnackBar</string>
+    <string name="button">스낵바 띄우기</string>
+    <string name="button2">대화상자 띄우기</string>
+</resources>
