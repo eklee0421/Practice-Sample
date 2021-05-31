@@ -19,3 +19,4 @@ C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj
 C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\Menu.baml
 C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\Discussion.g.cs
 C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\Discussion.baml
+C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\GeneratedInternalTypeHelper.g.cs
