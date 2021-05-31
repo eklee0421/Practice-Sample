@@ -13,3 +13,9 @@ C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj
 C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice.csproj.CoreCompileInputs.cache
 C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice.exe
 C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\WpfAppPractice.pdb
+C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\contact.g.cs
+C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\contact.baml
+C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\Menu.g.cs
+C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\Menu.baml
+C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\Discussion.g.cs
+C:\Users\LDCC\Documents\GitHub\Practice\C#\WPF\WpfAppPractice\WpfAppPractice\obj\Debug\Discussion.baml
