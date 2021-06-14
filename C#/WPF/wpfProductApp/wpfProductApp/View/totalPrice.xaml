@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="wpfProductApp.View.totalPrice"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:wpfProductApp.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="210" d:DesignWidth="250"
+             x:Name="totalproduct">
+
+    <StackPanel Background="#EFE9DB">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+            <TextBlock Text="총 합계" Grid.Row="0" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Grid.ColumnSpan="6" Margin="10" Foreground="#060606"/>
+            <TextBlock Text="총 금액" Grid.Row="1" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.ColumnSpan="2" Foreground="#060606"/>
+            <TextBlock  Grid.Row="1" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Background="#EDCFBB"/>
+            <TextBlock Text="할인 금액" Grid.Row="2" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.ColumnSpan="2" Foreground="#060606"/>
+            <TextBlock Grid.Row="2" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Background="#EDCFBB"/>
+            <TextBlock Text="결제 금액" Grid.Row="3" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.ColumnSpan="2" Foreground="#060606"/>
+            <TextBlock Grid.Row="3" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Background="#EDCFBB"/>
+
+        <!--<Button Content="등록" Grid.Row="4" Grid.Column="1" Margin="0,20,0,0" Grid.ColumnSpan="4" Grid.RowSpan="2" FontSize="16"/>-->
+
+    </Grid>
+    </StackPanel>
+</UserControl>
