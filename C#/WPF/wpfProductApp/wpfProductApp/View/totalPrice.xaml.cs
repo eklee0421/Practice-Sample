@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using wpfProductApp.Interface;
+using wpfProductApp.Model;
 using wpfProductApp.ViewModel;
 using wpfProductApp.ViewModel.ViewModels;
 
@@ -19,7 +20,7 @@ namespace wpfProductApp.View
     /// <summary>
     /// totalPrice.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class totalPrice : UserControl
+    public partial class totalPrice : UserControl, IProductList
     {
         private TotalPriceViewModel _vm;
         public ITotalPrice Interactor { set; private get; }
@@ -29,13 +30,21 @@ namespace wpfProductApp.View
             this.DataContext = new TotalPriceViewModel();
             _vm = this.DataContext as TotalPriceViewModel;
 
+            _vm.PropertyChanged += _vm_PropertyChanged;
+
+
+        }
+
+        private void _vm_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            //MessageBox.Show(e.PropertyName);
         }
 
 
         /// <summary>
         /// </summary>
-        /// <param name="num"></param>
-        //void total.Numchanged(string num) { _vm.numstring = num; }
+        /// <param name="total"></param>
+        void IProductList.ResultChange(Total total) { _vm.NewTotal = total; }
 
     }
 }

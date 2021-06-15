@@ -24,6 +24,7 @@ namespace wpfProductApp
         {
             InitializeComponent();
             mainSet.interactor = mainList;
+            mainList.interactor = mainTotal;
         }
     }
 }

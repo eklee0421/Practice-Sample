@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 using wpfProductApp.Model;
 using wpfProductApp.ViewModel.ViewModels;
 
@@ -13,18 +14,23 @@ namespace wpfProductApp.ViewModel
         {
 
         }
-        public Total total
+
+        private Total newTotal;
+        public Total NewTotal
         {
             get
             {
-                return total;
+                return newTotal;
             }
             set
             {
-                this.total = value;
-                OnPropertyChanged("SetTotal");
+                newTotal = value;
+                MessageBox.Show(NewTotal.SumPrice.ToString());
+                this.OnPropertyChanged("SettingTotal");
             }
         }
+
+        
     }
 
     

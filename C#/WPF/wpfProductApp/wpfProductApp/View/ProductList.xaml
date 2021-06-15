@@ -24,7 +24,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button x:Name="btLoad"  Margin="264,10,10,266" Visibility="Hidden" Command="{Binding LoadDataCommand}" />
+            <!--<Button x:Name="btLoad"  Margin="264,10,10,266" Visibility="Hidden" Command="{Binding LoadDataCommand}" />-->
         </Grid>
     </StackPanel>
 

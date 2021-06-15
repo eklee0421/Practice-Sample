@@ -38,10 +38,18 @@ namespace wpfProductApp.View
             switch (e.PropertyName)
             {
                 case "ProductAdded":
-                    
-                    //MessageBox.Show($"{_vm.NewProduct.Name}(이)가 추가되었음!!", "사용자추가");
+                    Result();
+                    interactor.ResultChange(_vm.NewTotal);
                     break;
             }
+        }
+
+        void Result()
+        {
+            _vm.NewTotal.SumPrice += _vm.NewProduct.Price;
+            _vm.NewTotal.SumDiscount += _vm.NewProduct.Discount;
+            _vm.NewTotal.TotalPrice = _vm.NewTotal.SumPrice - _vm.NewTotal.SumDiscount;
+
         }
 
         /// <summary>

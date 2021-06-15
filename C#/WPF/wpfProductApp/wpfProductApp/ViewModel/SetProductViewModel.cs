@@ -13,16 +13,16 @@ namespace wpfProductApp.ViewModel
     {
         List<Product> ProductLists = new List<Product>();
 
-        private Product product;
+        private Product newproduct;
         public Product NewProduct
         {
             get
             {
-                return product ?? (this.product = new Product());
+                return newproduct ?? (this.newproduct = new Product());
             }
             set
             {
-                product = value;
+                newproduct = value;
                 this.OnPropertyChanged("SettingProduct");
             }
         }

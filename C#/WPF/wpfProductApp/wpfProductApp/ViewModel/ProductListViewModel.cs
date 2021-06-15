@@ -21,6 +21,7 @@ namespace wpfProductApp.ViewModel
             }
         }
 
+        private Product newProduct;
         public Product NewProduct
         {
             get
@@ -29,38 +30,48 @@ namespace wpfProductApp.ViewModel
             }
             set
             {
+                newProduct = value;
                 products.Add(value);
+                
                 OnPropertyChanged("ProductAdded");
             }
         }
 
-        public Total total
+        private Total newTotal;
+        public Total NewTotal
         {
             get
             {
-                return total;
+                if (newTotal == null)
+                {
+                    return newTotal ?? (this.newTotal = new Total());
+                }
+                else
+                {
+                    return newTotal;
+                }
+                
             }
             set
             {
-                this.total.SumPrice += this.NewProduct.Price;
-                string str = this.total.SumPrice.ToString();
-                MessageBox.Show(str);
+                newTotal = value;
+                this.OnPropertyChanged("SettingTotal");
             }
         }
 
-        private ICommand loadDataCommand;
-        public ICommand LoadDataCommand
-        {
-            get
-            {
-                return loadDataCommand ?? (this.loadDataCommand = new DelegateCommand(LoadData));
-            }
-        }
+        //private ICommand loadDataCommand;
+        //public ICommand LoadDataCommand
+        //{
+        //    get
+        //    {
+        //        return loadDataCommand ?? (this.loadDataCommand = new DelegateCommand(LoadData));
+        //    }
+        //}
 
-        private void LoadData()
-        {
-            this.OnPropertyChanged("LoadData");
-        }
+        //private void LoadData()
+        //{
+        //    this.OnPropertyChanged("LoadData");
+        //}
 
 
     }

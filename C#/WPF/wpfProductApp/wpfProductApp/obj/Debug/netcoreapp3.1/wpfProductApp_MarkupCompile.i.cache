@@ -9,12 +9,12 @@ wpfProductApp
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-
-51800947411
+C:\Users\LDCC\source\repos\wpfProductApp\wpfProductApp\App.xaml
+47963887
 
 18-301761831
 192-1533232326
-App.xaml;MainWindow.xaml;View\ProductList.xaml;View\SetProduct.xaml;View\totalPrice.xaml;
+MainWindow.xaml;View\ProductList.xaml;View\SetProduct.xaml;View\totalPrice.xaml;
 
-False
+True
 
