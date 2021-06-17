@@ -9,12 +9,6 @@ namespace wpfProductApp.ViewModel
 {
     class TotalPriceViewModel:ViewModelBase
     {
-
-        public TotalPriceViewModel()
-        {
-
-        }
-
         private Total newTotal;
         public Total NewTotal
         {
@@ -25,7 +19,7 @@ namespace wpfProductApp.ViewModel
             set
             {
                 newTotal = value;
-                MessageBox.Show(NewTotal.SumPrice.ToString());
+                //MessageBox.Show(newTotal.sSumPrice);
                 this.OnPropertyChanged("SettingTotal");
             }
         }

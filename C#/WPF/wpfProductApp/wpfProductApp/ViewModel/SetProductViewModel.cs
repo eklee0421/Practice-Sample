@@ -43,6 +43,14 @@ namespace wpfProductApp.ViewModel
             {
                 MessageBox.Show("상품명을 등록하세요");
             }
+            else if(NewProduct.Price.ToString() == null)
+            {
+                MessageBox.Show("가격을 등록하세요");
+            }
+            else if (NewProduct.Discount.ToString() == null)
+            {
+                MessageBox.Show("할인 금액을 등록하세요");
+            }
             else if (NewProduct.Discount > NewProduct.Price)
             {
                 MessageBox.Show("할인 금액이 상품 가격보다 클 수 없습니다.");

@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:wpfProductApp.View"
              mc:Ignorable="d" 
              d:DesignHeight="210" d:DesignWidth="250"
-             x:Name="totalproduct">
+             x:Name="totalprice">
 
     <StackPanel Background="#EFE9DB">
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -29,11 +29,11 @@
 
             <TextBlock Text="총 합계" Grid.Row="0" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Grid.ColumnSpan="6" Margin="10" Foreground="#060606"/>
             <TextBlock Text="총 금액" Grid.Row="1" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.ColumnSpan="2" Foreground="#060606"/>
-            <TextBlock Grid.Row="1" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Background="#EDCFBB" Text="{Binding NewTotal.SumPrice, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock x:Name="txt" Grid.Row="1" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Background="#EDCFBB" Text="{Binding NewTotal.SumPrice, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
             <TextBlock Text="할인 금액" Grid.Row="2" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.ColumnSpan="2" Foreground="#060606"/>
-            <TextBlock Grid.Row="2" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Background="#EDCFBB" Text="{Binding NewTotal.SumDiscount}" />
+            <TextBlock x:Name="txt2" Grid.Row="2" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Background="#EDCFBB" Text="{Binding NewTotal.SumDiscount, UpdateSourceTrigger=PropertyChanged}" />
             <TextBlock Text="결제 금액" Grid.Row="3" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.ColumnSpan="2" Foreground="#060606"/>
-            <TextBlock Grid.Row="3" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Background="#EDCFBB" Text="{}"/>
+            <TextBlock x:Name="txt3" Grid.Row="3" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Background="#EDCFBB" Text="{Binding NewTotal.sTotalPrice}"/>
 
         <!--<Button Content="등록" Grid.Row="4" Grid.Column="1" Margin="0,20,0,0" Grid.ColumnSpan="4" Grid.RowSpan="2" FontSize="16"/>-->
 

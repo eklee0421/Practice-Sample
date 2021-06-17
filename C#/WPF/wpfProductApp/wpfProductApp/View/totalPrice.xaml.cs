@@ -37,14 +37,25 @@ namespace wpfProductApp.View
 
         private void _vm_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            //MessageBox.Show(e.PropertyName);
+            //txt.Text = _vm.NewTotal.SumPrice.ToString();
+
+            if(e.PropertyName == "SettingTotal")
+            {
+                txt.Text = _vm.NewTotal.SumPrice.ToString();
+                txt2.Text = _vm.NewTotal.SumDiscount.ToString();
+                txt3.Text = _vm.NewTotal.TotalPrice.ToString();
+                
+            }
+            
         }
 
 
         /// <summary>
         /// </summary>
         /// <param name="total"></param>
-        void IProductList.ResultChange(Total total) { _vm.NewTotal = total; }
+        void IProductList.ResultChange(Total total) { 
+            _vm.NewTotal = total;
+        }
 
     }
 }

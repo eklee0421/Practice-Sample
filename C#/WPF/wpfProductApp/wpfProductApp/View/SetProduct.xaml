@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:wpfProductApp.View"
              mc:Ignorable="d" 
-             d:DesignHeight="210" d:DesignWidth="250"
+             d:DesignHeight="299.559" d:DesignWidth="385.882"
              x:Name="setproduct">
-   
+
     <StackPanel Background="#E3EBBB">
 
         <Grid>
@@ -38,7 +38,7 @@
             <TextBox Grid.Row="3" Grid.Column="2" FontSize="16" Margin="10,10,10,0" Grid.ColumnSpan="4" Text="{Binding NewProduct.Discount}"/>
 
             <Button Content="등록" Grid.Row="4" Grid.Column="0" Margin="10,20,10,0" Grid.ColumnSpan="6" Grid.RowSpan="2" FontSize="16" Background="#CAE7C1" Command="{Binding SaveCommand}"/>
-            
+
         </Grid>
     </StackPanel>
 </UserControl>
