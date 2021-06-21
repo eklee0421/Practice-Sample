@@ -23,6 +23,7 @@ namespace WpfPreset
         public MainWindow()
         {
             InitializeComponent();
+            mainInput.interactor = mainList;
         }
     }
 }

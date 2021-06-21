@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfPreset.Interface
 {
-    interface IInputNumCode
+    public interface IInputNumCode
     {
         void SearchCode(string Inputstring);
     }

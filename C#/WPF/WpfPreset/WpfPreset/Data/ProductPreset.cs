@@ -8,12 +8,13 @@ using WpfPreset.Model;
 
 namespace WpfPreset.Data
 {
-    class ProductPreset
+    public class ProductPreset
     {
-        ProductPreset()
-        {
-            Dictionary<string, Product> products = new Dictionary<string, Product>();
 
+        private Dictionary<string, Product> products = new Dictionary<string, Product>();
+
+        public ProductPreset()
+        {
             products["1"] = new Product("1", "토레타", 1800);
             products["2"] = new Product("2", "마우스", 23500);
             products["3"] = new Product("3", "키보드", 150000);
@@ -34,11 +35,13 @@ namespace WpfPreset.Data
             products["18"] = new Product("18", "이어폰", 3000);
             products["19"] = new Product("19", "지갑", 134870);
             products["20"] = new Product("20", "연필꽂이", 88000);
-
-            for (int i = 1; i <= 20; i++)
-            {
-                MessageBox.Show(products[i.ToString()].Name);
-            }
         }
+
+        public Product GetProduct(string inputcode)
+        {
+            Product product = products[inputcode];
+            return product;
+        }
+        
     }
 }

@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfPreset.ViewModel;
 
-namespace WpfPreset.Model
+namespace WpfPreset.Interface
 {
-    public class InputString : ViewModelBase
+    public interface IProductList
     {
-        v
     }
 }

@@ -56,12 +56,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Interface\IInputNumCode.cs" />
-    <Compile Include="Model\InputString.cs" />
+    <Compile Include="Interface\IProductList.cs" />
+    <Compile Include="Model\FindProductModel.cs" />
     <Compile Include="ViewModel\DelegateCommands.cs" />
     <Compile Include="ViewModel\InputNumCodeViewModel.cs" />
+    <Compile Include="ViewModel\ProductListViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\InputNumCode.xaml.cs">
       <DependentUpon>InputNumCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProductList.xaml.cs">
+      <DependentUpon>ProductList.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -77,6 +82,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\InputNumCode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProductList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

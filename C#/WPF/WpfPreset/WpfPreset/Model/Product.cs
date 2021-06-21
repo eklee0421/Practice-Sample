@@ -8,6 +8,11 @@ namespace WpfPreset.Model
 {
     public class Product
     {
+        public Product()
+        {
+
+        }
+
         public Product(string NumCode, string Name, int Price)
         {
             this.NumCode = NumCode;
