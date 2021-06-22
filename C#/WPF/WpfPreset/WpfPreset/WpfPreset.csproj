@@ -61,6 +61,7 @@
     <Compile Include="ViewModel\DelegateCommands.cs" />
     <Compile Include="ViewModel\InputNumCodeViewModel.cs" />
     <Compile Include="ViewModel\ProductListViewModel.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\InputNumCode.xaml.cs">
       <DependentUpon>InputNumCode.xaml</DependentUpon>
