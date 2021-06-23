@@ -53,7 +53,13 @@ namespace WpfPreset.ViewModel
             }
         }
 
-        public void deleteList(ObservableCollection<Product> collection, Product p)
+        public void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+
+        public void deleteListALL(ObservableCollection<Product> collection, Product p)
         {
             if (collection.Contains(p))
             {

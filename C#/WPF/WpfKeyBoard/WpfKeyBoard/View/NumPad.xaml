@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="WpfKeyBoard.View.NumPad"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfKeyBoard.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="189">
+    <StackPanel>
+        <Border BorderBrush="#d3d3d3" BorderThickness="3" Margin="0,0,0,0" Height="35">
+            <TextBlock x:Name="label" Text="{Binding InputString, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="14"/>
+        </Border>
+        <Grid Height="190">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="bntSeven" Command="{Binding Append}" CommandParameter="7" Content="7" Grid.Row="0" Grid.Column="0" FontSize="16"/>
+            <Button x:Name="bntEight" Command="{Binding Append}" CommandParameter="8" Content="8" Grid.Row="0" Grid.Column="1" FontSize="16"/>
+            <Button x:Name="bntNine" Command="{Binding Append}" CommandParameter="9" Content="9" Grid.Row="0" Grid.Column="2" FontSize="16"/>
+            <Button x:Name="bntBack" Command="{Binding Back}" Content="←" Grid.Row="0" Grid.Column="3" FontSize="16"/>
+
+            <Button x:Name="bntFour" Command="{Binding Append}" CommandParameter="4" Content="4" Grid.Row="1" Grid.Column="0" FontSize="16"/>
+            <Button x:Name="bntFive" Command="{Binding Append}" CommandParameter="5" Content="5" Grid.Row="1" Grid.Column="1" FontSize="16"/>
+            <Button x:Name="bntSix" Command="{Binding Append}" CommandParameter="6" Content="6" Grid.Row="1" Grid.Column="2" FontSize="16"/>
+            <Button x:Name="bntClear" Command="{Binding Clear}" Content="C" Grid.Row="1" Grid.Column="3" FontSize="16"/>
+
+            <Button x:Name="bntOner" Command="{Binding Append}" CommandParameter="1" Content="1" Grid.Row="2" Grid.Column="0" FontSize="16"/>
+            <Button x:Name="bntTwo" Command="{Binding Append}" CommandParameter="2" Content="2" Grid.Row="2" Grid.Column="1" FontSize="16"/>
+            <Button x:Name="bntThree" Command="{Binding Append}" CommandParameter="3" Content="3" Grid.Row="2" Grid.Column="2" FontSize="16" />
+            <Button x:Name="bntZero4" Command="{Binding Append}" CommandParameter="0000" Content="0000" Grid.Row="2" Grid.Column="3" FontSize="16" Grid.RowSpan="2"/>
+
+            <Button x:Name="bntZero" Command="{Binding Append}" CommandParameter="0" Content="0" Grid.Row="3" Grid.Column="0" FontSize="16"/>
+            <Button x:Name="bntZero2" Command="{Binding Append}" CommandParameter="00" Content="00" Grid.Row="3" Grid.Column="1" FontSize="16" />
+            <Button x:Name="bntZero3" Command="{Binding Append}" CommandParameter="000" Content="000" Grid.Row="3" Grid.Column="2" FontSize="16"/>
+
+        </Grid>
+        <Button Content="Keyboard" Background="#ffa0" FontSize="16" Height="35"/>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,13 @@
+﻿<Window x:Class="WpfKeyBoard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view="clr-namespace:WpfKeyBoard.View"
+        xmlns:local="clr-namespace:WpfKeyBoard"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="320" Width="225">
+    <Grid>
+        <view:NumPad x:Name="ctrlPad" HorizontalAlignment="Left" Height="300" Margin="5,5,5,5" VerticalAlignment="Top" Width="200"/>
+    </Grid>
+</Window>
