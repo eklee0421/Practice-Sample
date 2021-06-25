@@ -43,6 +43,6 @@
             <Button x:Name="bntZero3" Command="{Binding Append}" CommandParameter="000" Content="000" Grid.Row="3" Grid.Column="2" FontSize="16"/>
 
         </Grid>
-        <Button Content="Keyboard" Background="#ffa0" FontSize="16" Height="35"/>
+        <Button Content="Keyboard" Command="{Binding OpenKeyboard}" Background="#ffa0" FontSize="16" Height="35"/>
     </StackPanel>
 </UserControl>

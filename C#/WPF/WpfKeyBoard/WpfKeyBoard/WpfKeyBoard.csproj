@@ -105,5 +105,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UsingKeyboard\UsingKeyboard.csproj">
+      <Project>{eb401e15-2fda-4a91-a535-e99d5946c7b3}</Project>
+      <Name>UsingKeyboard</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

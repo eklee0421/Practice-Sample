@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
+using WpfKeyBoard.View;
 
 namespace WpfKeyBoard.ViewModel
 {
@@ -19,11 +21,15 @@ namespace WpfKeyBoard.ViewModel
 
             //clk C
             this.Clear = new Clear(this);
+
+            this.OpenKeyboard = new OpenKeyboard(this);
         }
 
         public ICommand Append { protected set; get; }
         public ICommand Back { protected set; get; }
         public ICommand Clear { protected set; get; }
+
+        public ICommand OpenKeyboard { protected set; get; }
 
         private string inputString = String.Empty;
         public string InputString
@@ -98,7 +104,6 @@ namespace WpfKeyBoard.ViewModel
 
         }
     }
-
     class Clear : ICommand
     {
         private NumPadViewModel numpadviewmodel;
@@ -124,6 +129,36 @@ namespace WpfKeyBoard.ViewModel
         }
     }
 
+    class OpenKeyboard : ICommand
+    {
+        private NumPadViewModel numpadviewmodel;
+        public event EventHandler CanExecuteChanged;
+
+        public OpenKeyboard(NumPadViewModel numpadviewmodel)
+        {
+            this.numpadviewmodel = numpadviewmodel;
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public void Execute(object parameter)
+        {
+            UsingKeyboard.MainWindow keyboardWindow = new UsingKeyboard.MainWindow();
+            keyboardWindow.DataSendEvent += new UsingKeyboard.DataGetEventHandlder(this.DataGet);
+            keyboardWindow.ShowDialog();
+        }
+        public  void DataGet(string inputstring)
+        {
+            if (!inputstring.Equals(string.Empty))
+            {
+                numpadviewmodel.InputString = inputstring;
+            }
+        }
+       
+    }
 }
    
     

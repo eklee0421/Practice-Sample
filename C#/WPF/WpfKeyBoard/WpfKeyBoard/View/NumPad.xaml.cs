@@ -34,6 +34,7 @@ namespace WpfKeyBoard.View
             _vm = this.DataContext as NumPadViewModel;
 
             _vm.PropertyChanged += _vm_PropertyChanged;
+
         }
         private void _vm_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
