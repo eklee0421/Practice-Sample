@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LDCC\\Desktop\\WpfKeyBoard\\UsingKeyboard\\UsingKeyboard.csproj": {}
+    "C:\\Users\\LDCC\\Desktop\\MVVM2\\WpfKeyBoard\\UsingKeyboard\\UsingKeyboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LDCC\\Desktop\\WpfKeyBoard\\UsingKeyboard\\UsingKeyboard.csproj": {
+    "C:\\Users\\LDCC\\Desktop\\MVVM2\\WpfKeyBoard\\UsingKeyboard\\UsingKeyboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LDCC\\Desktop\\WpfKeyBoard\\UsingKeyboard\\UsingKeyboard.csproj",
+        "projectUniqueName": "C:\\Users\\LDCC\\Desktop\\MVVM2\\WpfKeyBoard\\UsingKeyboard\\UsingKeyboard.csproj",
         "projectName": "UsingKeyboard",
-        "projectPath": "C:\\Users\\LDCC\\Desktop\\WpfKeyBoard\\UsingKeyboard\\UsingKeyboard.csproj",
+        "projectPath": "C:\\Users\\LDCC\\Desktop\\MVVM2\\WpfKeyBoard\\UsingKeyboard\\UsingKeyboard.csproj",
         "packagesPath": "C:\\Users\\LDCC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LDCC\\Desktop\\WpfKeyBoard\\UsingKeyboard\\obj\\",
+        "outputPath": "C:\\Users\\LDCC\\Desktop\\MVVM2\\WpfKeyBoard\\UsingKeyboard\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

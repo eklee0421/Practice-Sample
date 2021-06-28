@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using WpfKeyBoard.Model;
 using WpfKeyBoard.View;
 
 namespace WpfKeyBoard.ViewModel
@@ -146,16 +147,10 @@ namespace WpfKeyBoard.ViewModel
 
         public void Execute(object parameter)
         {
-            UsingKeyboard.MainWindow keyboardWindow = new UsingKeyboard.MainWindow();
-            keyboardWindow.DataSendEvent += new UsingKeyboard.DataGetEventHandlder(this.DataGet);
-            keyboardWindow.ShowDialog();
-        }
-        public  void DataGet(string inputstring)
-        {
-            if (!inputstring.Equals(string.Empty))
-            {
-                numpadviewmodel.InputString = inputstring;
-            }
+
+            OpenVirtualKeyboard openVirtualKeyboard = new OpenVirtualKeyboard(numpadviewmodel.InputString);
+            numpadviewmodel.InputString = openVirtualKeyboard.ReturnData();
+
         }
        
     }
