@@ -1,0 +1,48 @@
+<!--간단한 계산기 프로그램-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>간단한 계산기</title>
+        <script>
+            function sen(char) {
+            var display = document.getElementById('display'); 
+            display.value = display.value + char;
+        }
+
+        function calc(type) {
+            if(type == 1){
+               
+                var result ='';
+                document.getElementById('display').value = result;
+            }
+            else if(type== 2){
+                var display = document.getElementById('display');
+                var result = eval(display.value); 
+                document.getElementById('display').value = result;
+                }
+        }
+        </script>
+    </head>
+    <body>
+        <form name ="calculator">
+            display <input type = "text" id = "display"><br/>
+            <input type = "button" value ="7" onclick="sen(7);">
+            <input type = "button" value ="8" onclick="sen(8);">
+            <input type = "button" value ="9" onclick="sen(9);">
+            <input type = "button" value ="/" onclick="sen('/');"><br>
+            <input type = "button" value ="4" onclick="sen(4);">
+            <input type = "button" value ="5" onclick="sen(5);">
+            <input type = "button" value ="6" onclick="sen(6);">
+            <input type = "button" value ="*" onclick="sen('*');"><br>
+            <input type = "button" value ="1" onclick="sen(1);">
+            <input type = "button" value ="2" onclick="sen(2);">
+            <input type = "button" value ="3" onclick="sen(3);">
+            <input type = "button" value ="-" onclick="sen('-');"><br>
+            <input type = "button" value ="0" onclick="sen(0);">
+            <input type = "button" value ="+" onclick="sen('+');"><br>
+            <input type = "button" value ="Clear" onclick="calc(1);">
+            <input type = "button" value ="Enter" onclick="calc(2);"><br>
+        </form>
+    </body>
+</html>

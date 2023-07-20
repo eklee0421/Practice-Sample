@@ -1,0 +1,28 @@
+<!--for문 이용하여 섭씨온도/화씨온도 표 만들기-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+              width: 10%;
+            }
+            table, th, td {
+              border: 1px solid #bcbcbc;
+            }
+          </style>
+    </head>
+    <body>
+            <script>
+                document.write("<table>");
+                document.write("<tr><td>섭씨온도</td><td>화씨온도</td></tr>");
+                for(var c=1;c<=10;c++){ 
+                    document.write("<tr><td>" + c + "</td>");
+                    var h = c * (9/5) + 32;
+                    document.write("<td>" + h + "</td></tr>");
+                    
+                }
+                document.write("</table>");
+                </script>
+    </body>
+</html>

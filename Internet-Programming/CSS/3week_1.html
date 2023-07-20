@@ -1,0 +1,28 @@
+<!--마우스를 올리면 카드의 앞면이 보인다-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>localhost</title>
+        <style>
+        .imgswap img:last-child{display:none}
+        .imgswap:hover img:first-child{display:none}
+        .imgswap:hover img:last-child{display:inline-block}
+        </style>
+    </head>
+    <body>
+        <h3><strong>:hover 활용</strong></h3>
+        <hr>
+        <table>
+            <tr> 
+            <td>마우스를 올리면 카드의 앞면이 보인다.</td>
+            <td><div class="imgswap">
+                <img src= "https://user-images.githubusercontent.com/52737339/65647641-38f7ce00-e03a-11e9-8b44-853f38dea471.png" width="100" height="150" />
+                <img src= "https://user-images.githubusercontent.com/52737339/65647601-27aec180-e03a-11e9-90aa-230273684b14.png" width="100" height="150" />
+            </div></td>
+            
+            </tr>
+        </table>
+
+    </body>
+</html>

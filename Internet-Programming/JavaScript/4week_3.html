@@ -1,0 +1,29 @@
+<!--for문 이용하여 구구단표 만들기-->
+
+<!DOCTYPE html>
+<html>
+        <style>
+                table {
+                  width: 2%;
+                }
+                table, th, td {
+                  border: 1px solid #bcbcbc;
+                }
+              </style>
+    <body>
+        <h1>구구단표</h1>
+        <br>
+        <script>
+            document.write("<table>");
+        for(var size=1;size<=9;size++){ 
+            document.write("<tr>");
+           for(var size2=1;size2<=9;size2++){
+            document.write("<td>" + size*size2 + "</td>");      
+           }
+           document.write("</tr>");
+           
+        }
+        document.write("</table>");
+        </script>
+    </body>
+</html>

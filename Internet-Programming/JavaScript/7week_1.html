@@ -1,0 +1,32 @@
+<!--마우스 커서를 따라다니는 오리 이미지-->
+<!--마우스 위치를 받아와서 이미지의 위치로 지정-->
+
+<!DOCTYPE html>
+  <html>
+    <head>
+        <title>이미지 커서</title>
+        <style>
+        img
+        {
+            width: 30px;
+            height: 30px;
+        }          
+        </style>
+    </head>
+    <body>
+      <h3>이미지 커서만들기</h3>
+      <hr>
+      마우스를 움직이면 이미지로 만든 커서가 마우스를 따라 다닙니다.
+      <div id="div" style="position: absolute">
+      <img src="https://user-images.githubusercontent.com/52737339/67000458-d6629100-f112-11e9-9538-c15c9e4bc964.png">
+      </div>
+      <script>
+      var div = document.getElementById("div");
+      window.onmousemove = function(e) 
+      {
+       div.style.left = e.clientX + 10 + "px";
+       div.style.top = e.clientY + 10 + "px"; 
+      }
+    </script>
+  </body>
+</html>
