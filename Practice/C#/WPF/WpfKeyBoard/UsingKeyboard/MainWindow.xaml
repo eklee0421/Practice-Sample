@@ -1,0 +1,23 @@
+﻿<Window x:Class="UsingKeyboard.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:UsingKeyboard"
+    Width="800"
+    Height="450"
+    Title="가상 키보드 사용하기"
+    FontFamily="나눔고딕코딩"
+    FontSize="16"
+    Closing="Window_Closing">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"    />
+        </Grid.RowDefinitions>
+        <TextBox Name="inputTextBox" Grid.Row="0"
+            Height="50" 
+            InputMethod.PreferredImeState="On"
+            InputMethod.PreferredImeConversionMode="Native" 
+            KeyDown="OnKeyDownHandler"/>
+        <local:VirtualKeyboardControl Grid.Row="1" Margin="0 10 0 0" IsShow="True" />
+    </Grid>
+</Window>

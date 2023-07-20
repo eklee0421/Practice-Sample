@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\LDCC\\Documents\\받은 파일\\TestProject\\TestProject\\TestProject.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\LDCC\\Documents\\받은 파일\\TestProject\\TestProject\\TestProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\LDCC\\Documents\\받은 파일\\TestProject\\TestProject\\TestProject.csproj",
+        "projectName": "TestProject",
+        "projectPath": "C:\\Users\\LDCC\\Documents\\받은 파일\\TestProject\\TestProject\\TestProject.csproj",
+        "packagesPath": "C:\\Users\\LDCC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LDCC\\Documents\\받은 파일\\TestProject\\TestProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\LDCC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "dependencies": {
+            "InputSimulator": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

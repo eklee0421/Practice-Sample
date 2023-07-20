@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yFzcQGKtO8qGL7p8ZBy1nNmDNnl004kaLxWb46cctrSfD5LzcI4nhenFrlYwPQbnwB+J9Hx3QdjZe4AilhCVAA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LDCC\\Desktop\\MVVM2\\WpfKeyBoard\\UsingKeyboard\\UsingKeyboard.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LDCC\\.nuget\\packages\\inputsimulator\\1.0.4\\inputsimulator.1.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
