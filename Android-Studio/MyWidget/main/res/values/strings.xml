@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyWidget</string>
+    <string name="myname">반가워 나의 이름은 마이크!</string>
+    <string name="button">확인</string>
+    <string name="check1">들었음</string>
+    <string name="man">남자</string>
+    <string name="woman">여자</string>
+</resources>

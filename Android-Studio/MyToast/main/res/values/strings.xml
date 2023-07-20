@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyToast</string>
+    <string name="toastup">토스트 띄우기</string>
+</resources>
